@@ -1,0 +1,181 @@
+.team-intro {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: calc(100vh - 64px); /* 减去导航栏的高度 */
+    background-color: #ffffff;
+    overflow-y: auto;
+}
+
+.team-content {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* 比赛展示部分 */
+.competition-showcase {
+    margin-bottom: 3rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+.competition-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-width: 120px;
+}
+
+.stat-item h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.stat-item p {
+    color: #3498db;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.competition-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.competition-images img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.competition-images img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.team-intro h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.team-section {
+    margin-bottom: 3rem;
+}
+
+.team-section h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.skill-item, .achievement-item {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.skill-item:hover, .achievement-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skill-item h3, .achievement-item h3 {
+    color: #2980b9;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.team-intro p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+/* 滚动条样式 */
+.team-intro::-webkit-scrollbar {
+    width: 8px;
+}
+
+.team-intro::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.team-intro::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.team-intro::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+@media (max-width: 768px) {
+    .team-intro {
+        padding: 1rem;
+    }
+
+    .team-content {
+        padding: 1rem;
+    }
+
+    .competition-stats {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .stat-item {
+        min-width: 100px;
+    }
+
+    .competition-images {
+        grid-template-columns: 1fr;
+    }
+
+    .team-intro h1 {
+        font-size: 2rem;
+    }
+
+    .team-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .skill-item h3, .achievement-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .team-intro p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+} 

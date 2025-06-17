@@ -1,0 +1,318 @@
+.pdf-reader-app {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: calc(100vh - 60px);
+    background-color: #f5f7fb;
+    color: #333;
+    padding: 2rem;
+    transition: padding-right 0.3s ease-in-out;
+}
+
+.pdf-reader-app.preview-open {
+    padding-right: calc(30% + 2rem);
+}
+
+.pdf-reader-app h1 {
+    color: #6366f1;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.upload-section {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+    margin-bottom: 2rem;
+}
+
+input[type="file"] {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 2px dashed #6366f1;
+    border-radius: 8px;
+    background-color: #f8fafc;
+    color: #333;
+    width: 100%;
+    transition: border-color 0.3s ease;
+    cursor: pointer;
+}
+
+input[type="file"]:hover {
+    border-color: #4f46e5;
+}
+
+button {
+    background-color: #6366f1;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 500;
+    font-size: 1rem;
+    margin: 0.5rem;
+}
+
+button:hover {
+    background-color: #4f46e5;
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.supported-formats {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.supported-formats p {
+    margin-bottom: 10px;
+    color: #666;
+    font-size: 14px;
+}
+
+.format-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.format-tag {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(99, 102, 241, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.format-tag:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(99, 102, 241, 0.3);
+}
+
+.selected-file-info {
+    margin: 10px 0;
+    padding: 10px 15px;
+    background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+    border: 1px solid #0ea5e9;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.file-icon {
+    font-size: 16px;
+}
+
+.file-name {
+    color: #0369a1;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.progress-section {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+    margin-bottom: 2rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #e2e8f0;
+    margin: 1rem 0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background-color: #6366f1;
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+.files-list {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+}
+
+.files-list h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    margin: 0;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+li button {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    margin-left: 0.5rem;
+}
+
+.preview-modal {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 30%;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.preview-modal.open {
+    transform: translateX(0);
+}
+
+.preview-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0;
+}
+
+.preview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #e2e8f0;
+    background-color: white;
+}
+
+.preview-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #4b5563;
+}
+
+.close-preview {
+    background: none;
+    border: none;
+    color: #6366f1;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    margin: 0;
+}
+
+.close-preview:hover {
+    color: #4f46e5;
+}
+
+.preview-iframe {
+    width: 100%;
+    height: calc(100% - 60px);
+    border: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.file-name {
+    flex: 1;
+    text-align: left;
+    margin-right: 1rem;
+    color: #4b5563;
+}
+
+.file-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.status-text {
+    color: #6366f1;
+    font-weight: 500;
+    margin: 0.5rem 0;
+}
+
+.batch-download-button {
+    background-color: #10b981;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.batch-download-button:hover {
+    background-color: #059669;
+}
+
+.backup-info {
+    background: linear-gradient(135deg, #f0f9ff, #ecfdf5);
+    border: 1px solid #10b981;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 15px 0;
+}
+
+.backup-info p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .pdf-reader-app.preview-open {
+        padding-right: 2rem;
+    }
+
+    .preview-modal {
+        width: 100%;
+    }
+
+    .upload-section,
+    .progress-section,
+    .files-list {
+        width: 95%;
+    }
+} 

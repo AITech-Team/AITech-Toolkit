@@ -1,0 +1,15 @@
+/* index.css */
+
+body {
+  margin: 0;
+  font-family: 'Roboto Mono', monospace; /* 科技感字体 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #121212; /* 深色背景 */
+  color: #e0e0e0; /* 亮色文字 */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

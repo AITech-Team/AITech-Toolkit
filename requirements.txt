@@ -1,0 +1,47 @@
+# Flask Web框架及相关依赖
+Flask==3.1.1
+Flask-CORS==6.0.0
+Werkzeug==3.1.3
+
+# PDF处理相关
+pdfplumber==0.11.6
+pdf2image==1.17.0
+Pillow==10.2.0
+
+# Office文档处理
+python-docx==1.1.2
+python-pptx==1.0.2
+openpyxl==3.1.2
+xlrd==2.0.1
+docx2pdf==0.1.8
+
+# 数据处理
+pandas==2.2.0
+numpy==1.26.3
+
+# 文本处理和编码
+chardet==5.2.0
+zhconv==1.4.3
+
+# AI和机器学习
+openai==1.82.0
+openai-whisper==20240930
+
+# 音频/视频处理
+pydub==0.25.1
+soundfile==0.13.1
+noisereduce==3.0.3
+imageio==2.37.0
+
+# 进度条和用户界面
+tqdm==4.66.2
+
+# 系统和工具
+PyYAML==6.0.1
+pywin32==310
+
+# 网络接口工具（可选，用于IP地址获取）
+netifaces==0.11.0
+
+# 其他依赖
+requests==2.31.0

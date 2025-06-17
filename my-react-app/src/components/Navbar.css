@@ -1,0 +1,105 @@
+.navbar {
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-brand {
+    flex: 1.2;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #2c3e50;
+    font-family: "Microsoft YaHei", "微软雅黑", sans-serif;
+    letter-spacing: 1px;
+}
+
+.nav-center {
+    display: flex;
+    gap: 2.5rem;
+    justify-content: flex-start;
+    flex: 2;
+    margin-left: -80px;
+}
+
+.nav-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #34495e;
+    font-size: 1.3rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    background-color: #f0f2f5;
+    color: #3498db;
+}
+
+.login-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-1px);
+}
+
+.login-button:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .nav-brand {
+        text-align: center;
+        font-size: 1.6rem;
+    }
+
+    .nav-center {
+        width: 100%;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-left: 0;
+    }
+
+    .nav-right {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .login-button {
+        width: 100%;
+        max-width: 200px;
+    }
+} 
