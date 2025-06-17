@@ -56,7 +56,7 @@ AITech-Toolkit 是一个功能强大的AI驱动文档处理平台，专为提高
 ```bash
 # 1. 克隆项目
 git clone https://github.com/AITech-Team/AITech-Toolkit.git
-cd AITech-Toolkit
+cd AITech-Toolkit-main
 
 # 2. 安装Python依赖
 pip install -r requirements.txt
@@ -98,7 +98,9 @@ AITech-Toolkit/
 
 ### 🔑 API密钥配置
 需自行替换如下文件中的部分
+
 modules\document_interpretation.py
+
 modules\pdf_image_processor.py
 ```bash
     api_key='your_api_key'
