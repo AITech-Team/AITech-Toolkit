@@ -107,6 +107,9 @@ modules\pdf_image_processor.py
 
 ```
 
+<img src="/doc/Resource/8B56BBAB-0A89-412d-AB27-C0627FCC5B8D.png">
+
+
 ### 🌐 网络配置
 
 AITech-Toolkit 支持多种部署场景：
